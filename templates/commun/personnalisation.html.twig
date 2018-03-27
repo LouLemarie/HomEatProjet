@@ -1,0 +1,48 @@
+{% extends "layout.html.twig" %}
+
+
+{% block page_title %}
+    Personnalisation
+{% endblock %}
+
+{% block content %}
+
+
+
+
+            {#       -----------------------------------------------------------------      #}
+
+
+                      {#         CONTENU PRINCIPAL DE LA PERSONNALISATION       #}
+
+
+
+    <div class="recette-container">
+
+        {#               Changement de Theme                #}
+        <form action="personnalisation/changement-de-template" method="POST" class="form-template">
+            <select class="select-template" name="template">
+                <option value="template-01">Blue & White</option>
+                <option value="template-02">Dark & Grey</option>
+                <option value="template-03">Purple & Camel</option>
+            </select>
+
+            <input type="submit" id="submit-template">
+        </form>
+
+
+
+
+    </div>
+
+
+                      {#       END CONTENU PRINCIPAL DE LA PERSONNALISATION       #}
+
+
+            {#       ---------------------------------------------------------------      #}
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "layout.html.twig" %}
+
+
+{% block page_title %}
+    Affiche Recette
+{% endblock %}
+
+{% block content %}
+
+
+
+
+            {#       --------------------------------------------------------      #}
+
+
+                    {#         CONTENU PRINCIPAL DE LA RECETTE        #}
+
+
+
+    <div class="recette-container">
+
+        <div class="recette-image-container">
+            <img class="recette-image" src="{{ asset(recipe.image) }}">
+        </div>
+
+        <div class="recette-top-container">
+            <h1 class="recette-titre">{{ recette.titre }}</h1>
+            <em class="recette-auteur">par <a>{{ auteur.nom }}</a></em>
+            <p class="recette-note">* * * * *</p>
+        </div>
+
+    </div>
+
+
+                    {#       END CONTENU PRINCIPAL DE LA RECETTE      #}
+
+
+            {#       --------------------------------------------------------      #}
+
+
+
+
+
+
+    {% endblock %}

@@ -1,0 +1,36 @@
+{% block page_title %}
+    {{ categorie.libelle }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="mesrecettes">
+        <ul class="mesrecettes-tableau">
+            <li>
+                <ul>
+                    <li class="mesrecettes-container mesrecettes-container-image">Image</li>
+                    <li class="mesrecettes-container">Nom</li>
+                    <li class="mesrecettes-container">Categories</li>
+                    <li class="mesrecettes-container">Prix / Notes</li>
+                </ul>
+            </li>
+
+            {% for recette in recettes %}
+                <li>
+                    <ul class="mesrecettes-response">
+                        <li class="mesrecettes-container grey mesrecettes-container-image image-container"><img class="mesrecettes-image" src="{{ asset  (recette.image) }}"></li>
+                        <li class="mesrecettes-container grey"><a href="{{ url('recette', { id : recette.id | lower }) }}">{{ recette.titre }}</a></li>
+                        <li class="mesrecettes-container grey">
+                            {% for categorie in recette.categorie %}
+                                <a>#{{ categorie.libelle }}</a>
+                            {% endfor %}
+                        </li>
+                        <li class="mesrecettes-container grey">{{ recette.prix }}.00 $     <span class="mesrecettes-note">* * * * * </span> </li>
+                    </ul>
+                </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+
+{% endblock %}

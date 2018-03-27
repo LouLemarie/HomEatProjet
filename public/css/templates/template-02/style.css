@@ -1,0 +1,201 @@
+
+/* coleur mcdo
+ jaune #f9df19
+ rouge #d52b1e
+ */
+
+
+
+
+/*------------------------------------ section side nav --------------------------------------------*/
+
+
+body {
+    background-image: linear-gradient(109.24244029308238deg, rgba(86, 216, 228,1) 6.140625%,rgba(154, 206, 149,1) 95.51562499999999%);
+}
+
+
+header, main, footer {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.side-nav .btn{
+    border-radius: 0px 0px 0px 0px;
+    width: 100%;
+}
+
+.background{
+
+    background-image: url("https://www.themississaugafoodbank.org/wp-content/uploads/2017/06/hero-image@2x.png");
+    background-position: center;
+    height: 150px;
+    margin-bottom: 30px;
+    line-height: 75px;
+
+}
+.background a{
+    width: 100%;
+
+}
+
+.background-logged{
+
+    background-image: url("https://www.themississaugafoodbank.org/wp-content/uploads/2017/06/hero-image@2x.png");
+    background-position: center;
+
+
+
+}
+.background-connexion{
+
+    background-image: url("https://www.themississaugafoodbank.org/wp-content/uploads/2017/06/hero-image@2x.png");
+    background-position: center;
+
+
+}
+
+.background-connexion input,#email,label,#row-connexion{
+    margin: 0;
+
+}
+
+.background-connexion button{
+    width: 100%;
+
+}
+
+
+
+/*------------------------------------ section filtre page d'accueil --------------------------------------------*/
+.range-field{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+
+}
+.list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+/*------------------------------------ section card page d'accueil --------------------------------------------*/
+body main #div-card{
+    position: relative;
+}
+
+body .liste-plat #panier{
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+
+}
+
+body main .card-image{
+
+    position: relative;
+}
+
+body main .cuisto{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(128, 128, 128, 0.41);
+    z-index: 2;
+}
+
+body main .cuisto #profil-cuisto-card{
+    width: 35px;
+
+    transform: translateY(-50%);
+    left: 22px;
+    border-radius: 50%!important;
+}
+body main .note{
+    position: absolute;
+    bottom: 50%;
+
+    left: 60px;
+    color: white;
+}
+
+#box-inscription{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 6;
+    padding: 0px;
+
+
+}
+
+.box-inscription form{
+
+    padding: 50px;
+}
+
+#right-panel {
+    height: 470px;
+    background: url("https://image.freepik.com/free-photo/food-background-food-concept-with-various-tasty-fresh-ingredients-for-cooking-italian-food-ingredients-view-from-above-with-copy-space_1220-1491.jpg") no-repeat;
+    background-size: cover;
+}
+
+
+/* ------------------------------------------------------------------ overlay effect -----------------------------*/
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/* --------------------------------------------------------- auteur ------------------------------------------*/
+
+.box-auteur{
+    border-radius: 20px;
+    display: flex;
+
+
+}
+
+.box-auteur hr {
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+/*------------------------------------------------------------ commentaire sur page auteur -------------------*/
+
+.un-commentaire{
+    background-color: white;
+    border-radius: 10px;
+
+
+}
+

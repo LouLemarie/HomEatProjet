@@ -1,0 +1,47 @@
+{% extends "layout.html.twig" %}
+
+
+{% block page_title %}
+    Accueil
+{% endblock %}
+
+{% block content %}
+
+
+                {#       --------------------------------------------------------      #}
+
+
+                            {#         CONTENU PRINCIPAL DE L'INDEX        #}
+
+
+                            <h1 style="text-align: center; width: 100%; margin-top: 150px;"> Bienvenue sur l'Index </h1>
+
+    <div class="index-container">
+
+
+                    {#         NOTIFICATIONS ET SUGGESTIONS       #}
+
+        <div class="index-notifications">
+            {#{{ message | raw }}#}
+        </div>
+
+
+                    {#                CONTENU                 #}
+
+        {{ render(controller('App\\Controller\\IndexController::plats')) }}
+
+
+
+    </div>
+
+
+                            {#       END CONTENU PRINCIPAL DE L'INDEX      #}
+
+
+                {#       --------------------------------------------------------      #}
+
+
+
+
+
+    {% endblock %}

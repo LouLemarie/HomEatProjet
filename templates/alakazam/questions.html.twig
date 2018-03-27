@@ -1,0 +1,68 @@
+<div class="alakazam-question-container">
+    <div class="alakazam-question">
+        <div class="alakazam-01" id="1">
+            <h1>Que recherchez vous ?</h1>
+            <div class="response-container">
+                <button class="response">
+                    Recette
+                </button>
+                <button class="response">
+                    Menu
+                </button>
+            </div>
+        </div>
+
+        <div class="alakazam-question-hide alakazam-02" id="2">
+            <h1>Quel repas ?</h1>
+            <div class="response-container">
+                <button class="response">
+                    Petit-Déjeuner
+                </button>
+                <button class="response">
+                    Déjeuner
+                </button>
+                <button class="response">
+                    Dîner
+                </button>
+                <button class="response">
+                    Autre
+                </button>
+            </div>
+        </div>
+
+        <div class="alakazam-question-hide alakazam-03" id="3">
+            <h1>Nombre de personnes ?</h1>
+            <div class="response-container">
+                <input class="nbrPers" type="range" min="1" max="15" value="1" aria-label="Sélectionner le nombre de personnes"><span class="output">1</span>
+                <button class="response">
+                    Valider
+                </button>
+            </div>
+        </div>
+
+        <div class="alakazam-question-hide alakazam-04" id="4">
+            <h1>Quel genre ?</h1>
+            <div class="response-container">
+                <button class="response">
+                    Sucré
+                </button>
+                <button class="response">
+                    Salé
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alakazam-option-container">
+        <a href="{{ url('alakazamResponse') }}" class="alakazam-option" id="alakazam-effacer">
+            EFFACER
+        </a>
+        <a href="{{ url('index') }}" class="alakazam-option" id="alakazam-retour">
+            RETOUR
+        </a>
+        <a class="alakazam-option" id="alakazam-valider">
+            Valider
+        </a>
+    </div>
+
+</div>

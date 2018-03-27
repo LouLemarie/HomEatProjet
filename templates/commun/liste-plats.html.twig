@@ -1,0 +1,101 @@
+<!-- ---------------------------------- liste des plats disponibles ---------------------------------- -->
+
+<div class="liste-plat">
+    <div class="row">
+
+
+        {% for plat in plats %}
+
+            <div class="col s12 m6 l6 xl4" id="div-card" style="margin: 40px 0px 40px 0px">
+                <a class="btn-floating btn-large waves-effect waves-light" id="panier"><i class="material-icons">shopping_cart</i></a>
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light activator" style=" background: url({{ plat.image }}); background-position: center;
+    background-size: cover">
+
+                        <div class="cuisto">
+                            <a href="{{ url('auteur', { id : plat.cuisto.id | lower }) }}">
+                                <img id="profil-cuisto-card" class="circle" src="{{ plat.cuisto.avatar }}">
+                            </a>
+                            <div class="note">
+                                <i class="material-icons tiny">star</i>
+                                <i class="material-icons tiny">star</i>
+                                <i class="material-icons tiny">star</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4 ">{{ plat.titre }}<i class="material-icons right small">add_circle</i></span>
+                        <span><p><a href="#"><em>{{ plat.quantity }} Parts disponibles</em></a></p><a class="waves-effect waves-light btn right" style="position: absolute; right: 5px">{{ plat.price }} euros/parts</a></span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">{{ plat.titre }}<i class="material-icons right">close</i></span>
+
+                        <a href="{{ url('auteur', { id : plat.cuisto.id | lower }) }}">
+                            <img style="width: 40px;" class="circle" src="{{ plat.cuisto.avatar }}">
+                            {{ plat.titre }}   <em>3 étoiles</em></a>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col s6">
+                                <h6>Ingredients</h6>
+                                <hr>
+                                <ul>
+                                    <li>Mozzarela</li>
+                                    {#{% for ingredient in ingredients %}#}
+                                        {#<a href="{{ url('ingredient') }}"><li>{{ ingredient.name }}</li></a>#}
+                                    {#{% endfor %}#}
+                                    <li>Riz</li>
+                                    <a href=""><li><em>Montrer plus ...</em></li></a>
+                                </ul>
+                            </div>
+                            <div class="col s6">
+                                <h6>Alèrgenes</h6>
+                                <hr>
+                                <ul>
+                                    <em>
+                                        <li>Cacahuètes</li>
+                                        <li>Lactose</li>
+                                        <li>Oeufs</li>
+                                    </em>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div  style="background-color: rgba(176,176,176,0.16)">
+                            <div class="row">
+                                <div class="col s8"> <strong><p>24 bis rue du champs des oiseaux, Rouen 76000</p></strong></div> <div class="col s4"><strong><p>{{ plat.hour | date('Y-m-d') }}</p></strong></div>
+                            </div>
+
+                        </div>
+
+
+
+                        <form action="">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Nombre de parts</option>
+                                    {% for i in 1..plat.quantity %}
+                                        {% if i == 1 %}
+                                            <option value="{{ i }}">{{ i }} part</option>
+                                        {% else %}
+                                            <option value="{{ i }}">{{ i }} parts</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                </select>
+
+                            </div>
+                            <div class="col s12">
+                                <button type="submit" class="waves-effect waves-light btn" style="width: 100%">Commander</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+
+
+    </div>
+
+</div>

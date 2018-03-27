@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+
+
+/*-------------------------------- CSS SideBar  --------------------------------------*/
+#sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0vh;
+    right: 0;
+    color: white;
+    background-color: white;
+}
+
+circle responsive-img {
+    width: 100%;
+}
+#meilleur {
+
+    font-family: 'Amatic SC', cursive;
+    color: black;
+
+}
+#recette {
+
+    font-family: 'Amatic SC', cursive;
+    color: black;
+    text-align: center;
+}
+
+#logo {
+    padding-top: 7px;
+}

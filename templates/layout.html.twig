@@ -1,0 +1,126 @@
+{% extends "base.html.twig" %}
+
+{# {% set categories = categorie_service.findAll() %} #}
+
+{% block stylesheets %}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}">
+    <!-- Online Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <!-- Vendor -->
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet" />
+
+    {# ---------------------------------------------------------------------------------------------- #}
+
+                                            {#   CSS   #}
+
+                                  {#   ***  ***  ***  ***  ***   #}
+
+    {% if app.session.get('template') is not null  %}
+
+            <!-- CSS PERSO => TEMPLATES -->
+        <link href="{{ asset('css/templates/'~app.session.get('template')~'/_navbar.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/'~app.session.get('template')~'/_slidebar.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/'~app.session.get('template')~'/index.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/'~app.session.get('template')~'/alakazam.css') }}" rel="stylesheet" />
+
+    {% else %}
+
+            <!-- CSS PAR DEFAUT => TEMPLATE-01 -->
+        <link href="{{ asset('css/templates/template-01/_navbar.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/template-01/_slidebar.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/template-01/index.css') }}" rel="stylesheet" />
+        <link href="{{ asset('css/templates/template-01/alakazam.css') }}" rel="stylesheet" />
+
+    {% endif %}
+
+
+        <link href="{{ asset('css/templates/template-01/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/templates/template-01/editor.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/templates/template-01/mesplats.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/templates/template-01/platscommander.css') }}" rel="stylesheet">
+
+    {# ---------------------------------------------------------------------------------------------- #}
+
+
+    <!-- JavaScripts -->
+    <!--<script src="js/modernizr.js"></script>-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+{% endblock %}
+
+{% block body %}
+
+    <!--preload-->
+    <div class="loader" id="page-loader">
+        <div class="loading-wrapper">
+        </div>
+    </div>
+
+    {#
+
+                PETITE IDEE D'ETIENNOURS
+       Ne pas toucher (sauf contre indication)
+                    Merci, bisous
+
+                                                    #}
+
+    {#<div class="container">#}
+        {#<div class="container1" id="myDIV">#}
+            {#<div class="container2">#}
+                <!--Contenu-->
+                {% block content '' %}
+            {#</div>#}
+        {#</div>#}
+    {#</div>#}
+
+
+    {# Le Pied de Page #}
+    {% include 'components/_footer.html.twig' %}
+
+{% endblock %}
+
+{% block javascripts %}
+    <!--script files-->
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+
+    <!-- AJAX -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+
+    <!-- -------------------------------- Script jquery ----------------------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+    {# --------------------------------------------------------------------------------- #}
+
+    <!-- JS PERSO -->
+    <script src="{{ asset('js/index/onglets.js') }}"></script>
+    <script src="{{ asset('js/index/rechercheRecette.js') }}"></script>
+    <script src="{{ asset('js/index/template.js') }}"></script>
+    <script src="{{ asset('js/index/alakazam.js') }}"></script>
+    <script src="{{ asset('js/index/editor.js') }}"></script>
+    <script src="{{ asset('js/index/_navbar.js') }}"></script>
+    <script src="{{ asset('js/index/sidebar.js') }}"></script>
+    <script src="{{ asset('js/index/auteur.js') }}"></script>
+
+    {# --------------------------------------------------------------------------------- #}
+{% endblock %}

@@ -1,0 +1,25 @@
+<form action="signin" class="col s12" method="post" style="padding: 30px">
+
+    <h5>Inscription</h5>
+
+
+    <div class="input-field col s12">
+        {{ form_row(form.name) }}
+    </div>
+
+    <div class="input-field col s12">
+        {{ form_row(form.mail) }}
+    </div>
+
+    <div class="input-field col s12">
+        {{ form_row(form.pass) }}
+    </div>
+
+    <div class="input-field col s12">
+        <input class="validate" type="text" style="margin-bottom: 0px;" name="confirmation-pass">
+    </div>
+
+
+    {{ form_row(form.submit) }}
+
+</form>

@@ -1,0 +1,37 @@
+
+
+{% block menu %}
+
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <ul class="collection">
+                <li class="collection-item avatar">
+                    <img src="images/yuna.jpg" alt="" class="circle">
+                    <span class="title">Chercher une nouvelle recette</span>
+
+                    <a href="{{ url('searchRecette') }}" class="waves-effect waves-light btn secondary-content">Recherche</a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle">folder</i>
+                    <span class="title">Mes Recettes</span>
+
+                    <a href="{{ url('index') }}" class="waves-effect waves-light btn secondary-content">Mes Recettes</a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle green">assessment</i>
+                    <span class="title">Title</span>
+
+                    <a href="{{ url('editor') }}" class="waves-effect waves-light btn secondary-content">Mettre en vente un nouveau plat</a>
+                </li>
+                <li class="collection-item avatar">
+                    <i class="material-icons circle red">play_arrow</i>
+                    <span class="title">Title</span>
+                    <p>First Line <br> Second Line </p>
+                    <a href="{{ url('personnalisation') }}" class="waves-effect waves-light btn secondary-content">Personalisation</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

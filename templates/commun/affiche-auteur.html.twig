@@ -1,0 +1,208 @@
+{% extends "layout.html.twig" %}
+
+{% block page_title %}
+    Affiche Recette
+{% endblock %}
+
+{% block content %}
+    <div class="row contenu">
+
+
+
+    {#       --------------------------------------------------------      #}
+
+
+            {#         CONTENU PRINCIPAL DE AUTEUR       #}
+
+
+
+    <div class="container">
+    <div class="card">
+        <div class="card-content center-align">
+            <img style="width: 10%; padding: 10px;" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23795538_1650975411690508_364041306487306684_n.jpg?_nc_cat=0&oh=2322e6a982435ed2c7a7093fa557cdcd&oe=5B73C98E" class="circle responsive-img" alt="photo de profil auteur">
+            <h5>Nom de l'auteur</h5>
+        </div>
+        <div class="card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a href="#plat">Mes plats</a></li>
+                <li class="tab"><a class="active" href="#messages">Mes messages</a></li>
+                <li class="tab"><a href="#profil">Mon profil</a></li>
+            </ul>
+        </div>
+        <div class="card-content grey lighten-4">
+            <div id="plat">
+
+                <div class="button2">
+                    <a href="!#" class="waves-effect waves-light btn-large z-depth-3" id="button2">Mettez en vente votre nouveau plat :)</a>
+                </div>
+                <div class="ajoutplats col s12 z-depth-3">
+                    <div class="row  valign-wrapper">
+                        <div class="col s2"><img class="responsive-img " src="https://www.rd.com/wp-content/uploads/2017/10/12_Citrus_Healthy-Holiday-Food-Gifts-Instead-of-Fruit-Cake_524210419-ch_ch.jpg" id="logo2"></div>
+                        <div class="col s2">
+                            <p>Nom du plat</p>
+
+                        </div>
+                        <div class="col s2">
+                            <p><em>Ingrédient :</em></p>
+                        </div>
+                        <div class="col s2">
+                            <p> <a class="btn-floating btn-large waves-effect waves-light blue" style="font-size: 0.7em">Nb/parts</a></p>
+                        </div>
+                        <div class="col s2">
+                            <p>Heure</p>
+                        </div>
+                        <div class="col s2">
+                            <p> <a class="btn-floating btn-large waves-effect waves-light green" style="font-size: 0.7em">Prix</a></p>
+                        </div>
+                    </div>
+                    <a class="waves-effect waves-light btn button-remettre">Remettre ce plat en vente</a>
+
+                </div>
+
+
+
+
+            </div>
+            <div id="messages">
+                <div class="col s12 m6" id="right-panel-message">
+
+                    <div class="col s12" style="background-color: rgba(128,128,128,0.05); margin-top:10px; overflow: auto; max-height:500px;">
+
+                        <div class="container">
+                            <div class="col s12 z-depth-2 un-commentaire" style="margin: 5px;">
+                                <span><img style="width: 15%; padding: 5px;" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23795538_1650975411690508_364041306487306684_n.jpg?_nc_cat=0&oh=2322e6a982435ed2c7a7093fa557cdcd&oe=5B73C98E" class="circle img-responsive" alt="photo de profil commentaire"> <em> Nom du commentateur </em></span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aut distinctio ducimus hic ipsam, laboriosam, magni necessitatibus neque numquam obcaecati officiis quidem quod voluptas voluptatibus? Corporis modi nesciunt reprehenderit!</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="col s12 z-depth-2 un-commentaire" style="margin: 5px;">
+                                <span><img style="width: 15%; padding: 5px;" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23795538_1650975411690508_364041306487306684_n.jpg?_nc_cat=0&oh=2322e6a982435ed2c7a7093fa557cdcd&oe=5B73C98E" class="circle img-responsive" alt="photo de profil commentaire"> <em> Nom du commentateur </em></span>
+                                <p>neque numquam obcaecati officiis quidem quod voluptas voluptatibus? Corporis modi nesciunt reprehenderit!</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="col s12 z-depth-2 un-commentaire" style="margin: 5px;">
+                                <span><img style="width: 15%; padding: 5px;" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23795538_1650975411690508_364041306487306684_n.jpg?_nc_cat=0&oh=2322e6a982435ed2c7a7093fa557cdcd&oe=5B73C98E" class="circle img-responsive" alt="photo de profil commentaire"> <em> Nom du commentateur </em></span>
+                                <p>neque numquam obcaecati officiis quidem quod voluptas voluptatibus? Corporis modi nesciunt reprehenderit!</p>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="col s12 z-depth-2 un-commentaire" style="margin: 5px;">
+                                <span><img style="width: 15%; padding: 5px;" src="https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/23795538_1650975411690508_364041306487306684_n.jpg?_nc_cat=0&oh=2322e6a982435ed2c7a7093fa557cdcd&oe=5B73C98E" class="circle img-responsive" alt="photo de profil commentaire"> <em> Nom du commentateur </em></span>
+                                <p>neque numquam obcaecati officiis quidem quod voluptas voluptatibus? Corporis modi nesciunt reprehenderit!</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12 valign-wrapper">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="icon_prefix2" class="materialize-textarea" data-length="140" maxlength="140"></textarea>
+                                <label for="icon_prefix2">Votre commentaire</label>
+                                <a class="btn-floating btn waves-effect waves-light"><i class="material-icons">send</i></a>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div id="profil">
+
+
+                <div class="col s12 m12" style="padding-bottom: 40px;">
+
+
+                    <br>
+
+                    <div class="col s12">
+                        <p>Ici vous pouvez trouvez l'email</p>
+
+                        <hr>
+                    </div>
+
+
+                    <div class="col s12">
+                        <p>Ici vous pouvez trouver la note</p>
+
+                        <hr>
+                    </div>
+
+                    <div class="col s12">
+                        <p>ici vous pouvez trouver le niveau d'exp</p>
+
+                        <hr>
+                    </div>
+
+                    <div class="col s12">
+                        <p>ici vous pouvez trouver le plat le plus populaire</p>
+
+                        <hr>
+                    </div>
+
+
+                    <div class="col s12">
+                        <p>ici vous pouvez trouver une bio ecrite par l'auteur</p>
+
+                        <hr>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    {##}
+    {#<div class="auteur-container">#}
+    {#<div class="auteur-nom"> {{ auteur.name }} {{ auteur.firstname }}</div>#}
+    {#<div class="image-container">#}
+    {#<div class="image"><img src="{{ auteur.avatar }}"></div>#}
+    {#</div>#}
+
+    {#<div class="informations-container"></div>#}
+
+    {#<div class="suggestions-container">#}
+    {#<div class="suggestions-titre"></div>#}
+    {#</div>#}
+
+    {#</div>#}
+
+    {#<div class="reviews-container">#}
+    {#{% for review in reviews %}#}
+    {#<div class="review-container">#}
+    {#<div class="avatar-container">#}
+    {#<div class="avatar"></div>#}
+    {#<div class="review-auteur"></div>#}
+    {#</div>#}
+    {#<div class="review">#}
+    {#<div class="review-content"></div>#}
+    {#<div class="review-note"></div>#}
+    {#</div>#}
+    {#</div>#}
+    {#{% endfor %}#}
+    {#</div>#}
+
+
+
+
+    {#       END CONTENU PRINCIPAL DE AUTEUR     #}
+
+
+    {#       --------------------------------------------------------      #}
+
+
+
+{% endblock %}

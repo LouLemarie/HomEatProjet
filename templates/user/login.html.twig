@@ -1,0 +1,57 @@
+{% extends "layout.html.twig" %}
+{% set active = 'login' %}
+{% block page_title %}
+    Login
+{% endblock %}
+
+{% block content %}
+
+
+            {#       ----------------------------------------------------------------------      #}
+
+
+                            {#         CONTENU PRINCIPAL DE LOGIN       #}
+
+
+
+        <div class="col-xs-10 col-xs-offset-1">
+            <form class="form-horizontal" method="POST"
+                  enctype="multipart/form-data">
+                <h3>LOGIN</h3>
+                {# Email de l'Auteur #}
+                <div class="form-group">
+                    <div class="col-md-8">
+                        {{ form_row(form.mail) }}
+                    </div>
+                </div>
+
+                {# Password de l'Auteur #}
+                <div class="form-group">
+                    <div class="col-md-8">
+                        {{ form_row(form.pass) }}
+                    </div>
+                </div>
+
+                {# Submit #}
+                <div class="form-group">
+                    <div class="col-xs-7 col-xs-offset-3">
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+
+                <h3>{{ message | raw }}</h3>
+
+                <a href="./reset_pass.php">Mot de passe oublié ? </a>
+
+            </form>
+        </div>
+    </div>
+
+
+                        {#       END CONTENU PRINCIPAL DE LOGIN      #}
+
+
+        {#       ----------------------------------------------------------------------       #}
+
+
+{% endblock %}

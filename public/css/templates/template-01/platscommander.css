@@ -1,0 +1,15 @@
+.image-plats-commander{
+    width: 100%;
+    background-image: url("https://assets.nrdc.org/sites/default/files/styles/header_background/public/180205_nrdc_fruitvegetable_41011_2400x900px.jpg?itok=UksXnw25");
+    background-size: cover;
+    text-align: center;
+}
+
+.image-plats-commander h1{
+
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    padding: 20px;
+    font-size: 5em;
+
+}

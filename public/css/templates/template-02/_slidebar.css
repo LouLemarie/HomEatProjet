@@ -1,0 +1,40 @@
+.slidebar {
+    position: fixed;
+    z-index: 1000;
+
+    width: 15%;
+    height: 90vh;
+    top: 10vh;
+
+    background-color: #39373a;
+}
+
+.slidebar-right {
+    left: 85%;
+}
+
+.slidebar-left {
+    left: 0;
+}
+
+
+.recette-top-container {
+    width: 70%;
+    height: auto;
+
+    text-align: center;
+    top: 15%;
+    left: 15%;
+
+    background-color: rgba(255,255,255,0.7);
+
+    position: absolute;
+    z-index: 5000;
+}
+
+.recette-image {
+    width: 70%;
+    height: 90vh;
+    top: 10vh;
+    position: fixed;
+}

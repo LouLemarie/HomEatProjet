@@ -1,0 +1,46 @@
+{% extends "layout.html.twig" %}
+{% set active = 'login' %}
+{% block page_title %}
+    ALAKAZAM | RESPONSE
+{% endblock %}
+
+{% block content %}
+
+
+        {#       -------------------------------------------------------------------------------------      #}
+
+
+                        {#         CONTENU PRINCIPAL DE ALAKAZAM RESPONSE        #}
+
+
+        <h1 style="text-align: center; width: 100%; padding-top: 50px;"> Alakazam ! </h1>
+
+
+
+                    {#          ---------------------------------------------             #}
+
+                                    {#        QUESTIONS        #}
+
+             {{ render(controller('App\\Controller\\IndexController::alakazamQuestions')) }}
+
+                                    {#      END QUESTIONS      #}
+
+                    {#          ---------------------------------------------             #}
+
+
+
+
+
+
+
+
+                    {#          ---------------------------------------------             #}
+
+
+                        {#       END CONTENU PRINCIPAL DE ALAKAZAM RESPONSE      #}
+
+
+        {#       ------------------------------------------------------------------------------------      #}
+
+
+{% endblock %}

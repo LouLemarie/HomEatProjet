@@ -1,0 +1,65 @@
+
+<!-- ---------------------------------- menu navigation ---------------------------------- -->
+
+<ul id="slide-out" class="side-nav fixed">
+
+    {% if app.session.get('userId') is not null %}
+
+        {{ render(controller('App\\Controller\\IndexController::user')) }}
+
+
+        <li><a class="waves-effect tooltipped " data-tooltip="Ici vous pouvez mettre en vente vos plats fait maison :)" href="{{ url("editor") }}">Partagez vos plats !</a></li>
+        <li><a class="waves-effect" href="{{ url("index") }}">Vos ventes en cours</a></li>
+        <li><a class="waves-effect" href="{{ url("auteur", { id :  app.session.get('userId')}) }}"><i class="material-icons">perm_identity</i>Votre Profil</a></li>
+
+        <li><a class="waves-effect" href="#!"><i class="material-icons">timeline</i>Satistique</a></li>
+        <li><a class="waves-effect" href="{{ url("params") }}"><i class="material-icons">build</i>Mes paramètres</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">search</i>Recherche</a></li>
+
+
+
+    {% else %}
+
+        <li>
+            <div class="background">
+                <a class="waves-effect waves-light btn " id="connexion">Connexion</a>
+                <a class="waves-effect waves-light btn " id="inscription">inscription</a>
+            </div>
+        </li>
+
+
+        <li><a class="waves-effect tooltipped " data-tooltip="Ici vous pouvez mettre en vente vos plats fait maison :)" href="#">Partagez vos plats !</a></li>
+        <li><a class="waves-effect" href="#">Vos ventes en cours</a></li>
+        <li><a class="waves-effect" href=""><i class="material-icons">perm_identity</i>Votre Profil</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">timeline</i>Satistique</a></li>
+        <li><a class="waves-effect" href="#!"><i class="material-icons">search</i>Recherche</a></li>
+
+
+    {% endif %}
+
+
+</ul>
+
+
+<a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+<div id="overlay">
+    <div class="row">
+        <div class="box-inscription col s8 m6 z-depth-3" id="box-inscription" style="background-color: white">
+
+
+            <div class="col s10 m6">
+                <a href="#" id="overlay-off"><i class="material-icons right">close</i></a>
+                {{ render(controller('App\\Controller\\IndexController::inscription')) }}
+            </div>
+            <div class="col s2 m6" id="right-panel" >
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
