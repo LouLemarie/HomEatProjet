@@ -37,16 +37,16 @@ $(function() {
     $('#connexion').click(function(){
 
         $( "div.background" ).replaceWith( "<div class=\"background-connexion\">\n" +
-            "            <form action=\"\">\n" +
+            "            <form action='/login' method='post'>\n" +
             "                <div class=\"row\" id=\"row-connexion\">\n" +
             "                    <div class=\"input-field col s12\">\n" +
-            "                        <input id=\"email\" type=\"email\" class=\"validate\">\n" +
+            "                        <input id=\"email\" type=\"email\" name='mail' class=\"validate\">\n" +
             "                        <label for=\"email\">Email</label>\n" +
             "                    </div>\n" +
             "                </div>\n" +
             "                <div class=\"row\" id=\"row-connexion\">\n" +
             "                    <div class=\"input-field col s12\">\n" +
-            "                        <input id=\"password\" type=\"password\" class=\"validate\">\n" +
+            "                        <input id=\"password\" type=\"password\" name='pass' class=\"validate\">\n" +
             "                        <label for=\"password\">Password</label>\n" +
             "                    </div>\n" +
             "                </div>\n" +
@@ -59,10 +59,10 @@ $(function() {
 
 
 
-        $('.submit-login').click(function(e) {
-            e.preventDefault()
-            location.href = "http://localhost:8000/login"
-        })
+        // $('.submit-login').click(function(e) {
+        //     e.preventDefault()
+        //     location.href = "http://localhost:8000/login"
+        // })
     });
 
 
@@ -77,4 +77,4 @@ $(function() {
         // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
         $('.modal').modal();
     });
-})
+})})
